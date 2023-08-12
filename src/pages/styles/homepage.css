@@ -40,6 +40,13 @@
 	width: 300px;
 	height: 400px;
 }
+.res {
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: center;
+	align-items: center;
+	padding-top: 13px;
+}
 
 .homepage-image-wrapper {
 	overflow: hidden;
@@ -49,13 +56,6 @@
 
 .homepage-image-wrapper img {
 	width: 100%;
-}
-
-.homepage-socials {
-	display: flex;
-	justify-content: left;
-	align-items: center;
-	padding-top: 30px;
 }
 
 .homepage-social-icon {
@@ -95,10 +95,10 @@
 
 @media (max-width: 1024px) {
 	.homepage-image-wrapper img {
-			width: 90%;
-			padding-left: 50px;
-			border-radius: 20px;
-		}
+		width: 90%;
+		padding-left: 50px;
+		border-radius: 20px;
+	}
 	.homepage-first-area {
 		flex-direction: column;
 	}

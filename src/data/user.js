@@ -3,7 +3,7 @@ const INFO = {
 		title: "Ankush Banerjee",
 		name: "Ankush Banerjee",
 		email: "banerjeeankush184@gmail.com",
-		logo: "../logo.png",
+		logo: "https://i.pinimg.com/236x/9d/54/1d/9d541d4f2fe368c67e2a49a23076e59f.jpg",
 	},
 
 	socials: {
@@ -20,7 +20,7 @@ const INFO = {
 	},
 
 	about: {
-		title: "I’m Ankush , I live in Kolkata and I’m a Full Stack Developer!",
+		title: "I’m Ankush , I live in Kolkata and I love to code  and watch Anime !",
 		description:
 			"I am extremely passionate about problem solving and learning new technologies, I am comfortable in both frontend and backend role and can adopt in any tech stack on the go . I have worked on React js and Angular and have experience in developing production grade full stack applications and for the backend i have used Node js ,Looking forward for making more scalable Applications and learning new technologies.",
 	},

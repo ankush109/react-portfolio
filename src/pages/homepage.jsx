@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
-
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -24,6 +24,7 @@ import { Typewriter } from "react-simple-typewriter";
 import "./styles/homepage.css";
 import Skills from "./Skills";
 import Exerience from "./Exerience";
+import { Button } from "@mui/material";
 
 const Homepage = () => {
 	const [stayLogo, setStayLogo] = useState(false);
@@ -112,6 +113,7 @@ const Homepage = () => {
 											marginLeft: "10px",
 											position: "relative",
 											display: "inline-block",
+											color: "#14b8a6",
 										}}
 									>
 										<Typewriter
@@ -124,7 +126,7 @@ const Homepage = () => {
 											loop
 											cursor
 											cursorStyle="_"
-											typeSpeed={150}
+											typeSpeed={100}
 											deleteSpeed={100}
 											delaySpeed={1000}
 										/>
@@ -132,6 +134,61 @@ const Homepage = () => {
 								</div>
 								<div className="subtitle homepage-subtitle">
 									{INFO.homepage.description}
+								</div>
+								<div className="res">
+									<div className="homepage-socials">
+										<a
+											href={INFO.socials.github}
+											target="_blank"
+											rel="noreferrer"
+										>
+											<FontAwesomeIcon
+												icon={faGithub}
+												className="homepage-social-icon"
+											/>
+										</a>
+
+										<a
+											href={INFO.socials.instagram}
+											target="_blank"
+											rel="noreferrer"
+										>
+											<FontAwesomeIcon
+												icon={faInstagram}
+												className="homepage-social-icon"
+											/>
+										</a>
+										<a
+											href={`mailto:${INFO.main.email}`}
+											target="_blank"
+											rel="noreferrer"
+										>
+											<FontAwesomeIcon
+												icon={faLinkedin}
+												className="homepage-social-icon"
+											/>
+										</a>
+									</div>
+									<div
+										style={{
+											paddingTop: "20px",
+										}}
+									>
+										<Button
+											variant="contained"
+											color="primary"
+											style={{
+												marginRight: "20px",
+												marginBottom: "20px",
+												padding: "10px 20px",
+												backgroundColor: "#14b8a6",
+												borderRadius: "20px",
+											}}
+											href="https://drive.google.com/file/d/1sp-eQmaDzqW7zTZ3K9apiZ_HUXy55aaH/view?usp=sharing"
+										>
+											My Resume
+										</Button>
+									</div>
 								</div>
 							</div>
 
@@ -146,40 +203,6 @@ const Homepage = () => {
 									</div>
 								</div>
 							</div>
-						</div>
-
-						<div className="homepage-socials">
-							<a
-								href={INFO.socials.github}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faGithub}
-									className="homepage-social-icon"
-								/>
-							</a>
-
-							<a
-								href={INFO.socials.instagram}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faInstagram}
-									className="homepage-social-icon"
-								/>
-							</a>
-							<a
-								href={`mailto:${INFO.main.email}`}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faMailBulk}
-									className="homepage-social-icon"
-								/>
-							</a>
 						</div>
 
 						{/* <div className="homepage-projects">
