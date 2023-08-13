@@ -5,12 +5,27 @@ import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
 import Logo from "../components/common/logo";
 import Socials from "../components/about/socials";
-
+import { motion } from "framer-motion";
 import INFO from "../data/user";
 import SEO from "../data/seo";
 
 import "./styles/contact.css";
-
+const containerVariants = {
+	hidden: {
+		opacity: 1,
+	},
+	visible: {
+		opacity: 1,
+		transition: {
+			delay: 1.5,
+			duration: 1.5,
+		},
+	},
+	exit: {
+		x: "-100vw",
+		transition: { ease: "easeInOut" },
+	},
+};
 const Contact = () => {
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -19,7 +34,19 @@ const Contact = () => {
 	const currentSEO = SEO.find((item) => item.page === "contact");
 
 	return (
-		<React.Fragment>
+		<motion.div
+			initial={{
+				x: "-100vw",
+			}}
+			animate={{
+				x: 0,
+			}}
+			transition={{
+				type: "spring",
+				stiffness: 35,
+				delay: 0.2,
+			}}
+		>
 			<Helmet>
 				<title>{`Contact | ${INFO.main.title}`}</title>
 				<meta name="description" content={currentSEO.description} />
@@ -89,7 +116,7 @@ const Contact = () => {
 					</div>
 				</div>
 			</div>
-		</React.Fragment>
+		</motion.div>
 	);
 };
 

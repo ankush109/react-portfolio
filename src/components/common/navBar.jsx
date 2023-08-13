@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { motion } from "framer-motion";
 import "./styles/navBar.css";
 
 const NavBar = (props) => {
 	const { active } = props;
 
 	return (
-		<React.Fragment>
+		<motion.div>
 			<div className="nav-container">
 				<nav className="navbar">
 					<div className="nav-background">
@@ -53,7 +53,7 @@ const NavBar = (props) => {
 					</div>
 				</nav>
 			</div>
-		</React.Fragment>
+		</motion.div>
 	);
 };
 

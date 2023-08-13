@@ -18,7 +18,7 @@ import { FaHardHat } from "react-icons/fa";
 import { DiJava, DiHeroku } from "react-icons/di";
 import { BsGithub } from "react-icons/bs";
 import "./styles/skills.css";
-
+import { motion } from "framer-motion";
 const loadSkills = [
 	{
 		icon: <SiHtml5 color="" style={{ fontSize: "50px" }} />,
@@ -73,20 +73,28 @@ const loadSkills = [
 ];
 function Skills() {
 	return (
-		<div className="op">
-			<div className="head">
-				<h1>Skills</h1>
-			</div>
-			<div className="skills">
-				{loadSkills.map((obj, id) => (
-					<div className="item space-y-2 " key={id}>
-						<p className="text-primary w-full flex flex-row justify-center ">
-							{obj.icon}
-						</p>
-						<p>{obj.tech}</p>
-					</div>
-				))}
-			</div>
+		<div>
+			<motion.div className="op">
+				<div className="head">
+					<h1
+						style={{
+							color: "#008080",
+						}}
+					>
+						Skills
+					</h1>
+				</div>
+				<div className="skills">
+					{loadSkills.map((obj, id) => (
+						<div className="item space-y-2 " key={id}>
+							<p className="text-primary w-full flex flex-row justify-center ">
+								{obj.icon}
+							</p>
+							<p>{obj.tech}</p>
+						</div>
+					))}
+				</div>
+			</motion.div>
 		</div>
 	);
 }

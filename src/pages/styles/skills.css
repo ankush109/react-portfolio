@@ -1,35 +1,44 @@
-.skills{
-    padding: 50px 0;
-    text-align: center;
-    background: #fff;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-
-
-
+.skills {
+	padding: 50px 0;
+	text-align: center;
+	background: #fff;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
 }
-.head{
-color: var(--primary-color);
-    font-family: var(--secondary-font);
-    font-size: 20px;
-    padding-left: 30px;
-    font-weight: 700;
+.head > h1 {
+	color: var(--primary-color);
+	font-family: var(--secondary-font);
+	font-size: 55px;
+	padding-left: 30px;
+
+	font-weight: 700;
 }
-.skills .item{
-    border: none;
-    background: #fff;
-    margin: 0 10px;
-    padding: 1px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    transition: 0.4s;
-    width: 140px;
-    margin-bottom: 30px;
+.skills .item {
+	border: none;
+	background: #fff;
+	margin: 0 10px;
+	padding: 1px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	transition: 0.4s;
+	width: 140px;
+	margin-bottom: 30px;
 }
-.op{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.op {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-top: 100px;
+}
+
+.slide-in {
+	transform: translateY(50px);
+	transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.slide-in.active {
+	opacity: 1;
+	transform: translateY(0);
 }

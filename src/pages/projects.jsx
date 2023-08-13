@@ -5,12 +5,27 @@ import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
 import Logo from "../components/common/logo";
 import AllProjects from "../components/projects/allProjects";
-
+import { motion } from "framer-motion";
 import INFO from "../data/user";
 import SEO from "../data/seo";
 
 import "./styles/projects.css";
-
+const containerVariants = {
+	hidden: {
+		opacity: 1,
+	},
+	visible: {
+		opacity: 1,
+		transition: {
+			delay: 1.5,
+			duration: 1.5,
+		},
+	},
+	exit: {
+		x: "-100vw",
+		transition: { ease: "easeInOut" },
+	},
+};
 const Projects = () => {
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -19,7 +34,19 @@ const Projects = () => {
 	const currentSEO = SEO.find((item) => item.page === "projects");
 
 	return (
-		<React.Fragment>
+		<motion.div
+			initial={{
+				x: "-100vw",
+			}}
+			animate={{
+				x: 0,
+			}}
+			transition={{
+				type: "spring",
+				stiffness: 35,
+				delay: 0.2,
+			}}
+		>
 			<Helmet>
 				<title>{`Projects | ${INFO.main.title}`}</title>
 				<meta name="description" content={currentSEO.description} />
@@ -38,7 +65,12 @@ const Projects = () => {
 						</div>
 					</div>
 					<div className="projects-container">
-						<div className="title projects-title">
+						<div
+							className="title projects-title"
+							style={{
+								color: "#008080",
+							}}
+						>
 							Things I’ve made trying to put my dent in the
 							universe.
 						</div>
@@ -65,7 +97,7 @@ const Projects = () => {
 					</div>
 				</div>
 			</div>
-		</React.Fragment>
+		</motion.div>
 	);
 };
 

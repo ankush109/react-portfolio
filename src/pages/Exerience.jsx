@@ -1,20 +1,21 @@
 import React from "react";
 import "./styles/exp.css";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-function Exerience() {
+
+function Experience() {
 	return (
 		<div className="container">
 			<div className="f">
-				<h1>Exerience</h1>
+				<h1>Experience</h1>
 			</div>
 			<div className="card">
 				<div>
 					<div className="header-container">
 						<h2 className="inline-heading">
-							Software Developer Intern @{" "}
+							Software Developer Intern @
 						</h2>
 						<h2 className="inline-heading2">
-							&nbsp; Anicca Data Services
+							Anicca Data Services
 						</h2>
 					</div>
 					<div className="point">
@@ -22,7 +23,7 @@ function Exerience() {
 							<ArrowForwardIosIcon
 								style={{
 									fontSize: "15px",
-									"padding-right": "10px",
+									paddingRight: "10px",
 								}}
 							/>
 						</div>
@@ -37,7 +38,7 @@ function Exerience() {
 							<ArrowForwardIosIcon
 								style={{
 									fontSize: "15px",
-									"padding-right": "10px",
+									paddingRight: "10px",
 								}}
 							/>
 						</div>
@@ -51,7 +52,7 @@ function Exerience() {
 							<ArrowForwardIosIcon
 								style={{
 									fontSize: "15px",
-									"padding-right": "10px",
+									paddingRight: "10px",
 								}}
 							/>
 						</div>
@@ -65,7 +66,7 @@ function Exerience() {
 							<ArrowForwardIosIcon
 								style={{
 									fontSize: "15px",
-									"padding-right": "10px",
+									paddingRight: "10px",
 								}}
 							/>
 						</div>
@@ -80,4 +81,4 @@ function Exerience() {
 	);
 }
 
-export default Exerience;
+export default Experience;

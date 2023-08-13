@@ -1,5 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
+import "./styles/skills.css";
+import {
+	SiHtml5,
+	SiCss3,
+	SiJavascript,
+	SiMongodb,
+	SiReact,
+	SiNodedotjs,
+	SiSolidity,
+	SiPython,
+	SiFirebase,
+	SiVercel,
+	SiNetlify,
+	SiGooglefonts,
+	SiBootstrap,
+} from "react-icons/si";
+import { FaHardHat } from "react-icons/fa";
+import { DiJava, DiHeroku } from "react-icons/di";
+import { BsGithub } from "react-icons/bs";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,12 +28,11 @@ import {
 	faStackOverflow,
 	faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
-
+import { useRef } from "react";
+import { motion } from "framer-motion";
 import Logo from "../components/common/logo";
 import Footer from "../components/common/footer";
 import NavBar from "../components/common/navBar";
-
-import AllProjects from "../components/projects/allProjects";
 
 import INFO from "../data/user";
 import a from "./ankush.jpeg";
@@ -24,12 +42,24 @@ import { Typewriter } from "react-simple-typewriter";
 import "./styles/homepage.css";
 import Skills from "./Skills";
 import Exerience from "./Exerience";
-import { Button } from "@mui/material";
 
 const Homepage = () => {
 	const [stayLogo, setStayLogo] = useState(false);
 	const [logoSize, setLogoSize] = useState(80);
 	const [oldLogoSize, setOldLogoSize] = useState(80);
+
+	const svgStyle = {
+		hidden: { rotate: -180 },
+
+		visible: {
+			rotate: 0,
+
+			transition: {
+				duration: 1,
+				delay: 1.4,
+			},
+		},
+	};
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -62,11 +92,7 @@ const Homepage = () => {
 	const currentSEO = SEO.find((item) => item.page === "home");
 
 	const [loading, setLoading] = useState(false);
-	const override = {
-		display: "block",
-		margin: "20% auto",
-		borderColor: "red",
-	};
+
 	useEffect(() => {
 		setLoading(true);
 		setTimeout(() => {
@@ -85,7 +111,20 @@ const Homepage = () => {
 	};
 
 	return (
-		<React.Fragment>
+		<motion.div
+			initial={{
+				x: "-100vw",
+			}}
+			animate={{
+				x: 0,
+			}}
+			transition={{
+				type: "spring",
+				stiffness: 35,
+				delay: 0.2,
+			}}
+			exit="exit"
+		>
 			<Helmet>
 				<title>{INFO.main.title}</title>
 				<meta name="description" content={currentSEO.description} />
@@ -99,9 +138,13 @@ const Homepage = () => {
 				<NavBar active="home" />
 				<div className="content-wrapper">
 					<div className="homepage-logo-container">
-						<div style={logoStyle}>
+						<motion.div
+							variants={svgStyle}
+							initial="hidden"
+							animate="visible"
+						>
 							<Logo width={logoSize} link={false} />
-						</div>
+						</motion.div>
 					</div>
 
 					<div className="homepage-container">
@@ -113,7 +156,7 @@ const Homepage = () => {
 											marginLeft: "10px",
 											position: "relative",
 											display: "inline-block",
-											color: "#14b8a6",
+											color: "#008080",
 										}}
 									>
 										<Typewriter
@@ -169,26 +212,37 @@ const Homepage = () => {
 											/>
 										</a>
 									</div>
-									<div
-										style={{
-											paddingTop: "20px",
-										}}
-									>
-										<Button
-											variant="contained"
-											color="primary"
+									<a href="https://drive.google.com/file/d/1sp-eQmaDzqW7zTZ3K9apiZ_HUXy55aaH/view?usp=sharing">
+										<div
 											style={{
-												marginRight: "20px",
-												marginBottom: "20px",
-												padding: "10px 20px",
-												backgroundColor: "#14b8a6",
-												borderRadius: "20px",
+												paddingTop: "20px",
 											}}
-											href="https://drive.google.com/file/d/1sp-eQmaDzqW7zTZ3K9apiZ_HUXy55aaH/view?usp=sharing"
 										>
-											My Resume
-										</Button>
-									</div>
+											<motion.button
+												onClick={() => {}}
+												variant="contained"
+												color="primary"
+												whileHover={{
+													scale: 1.1,
+													boxShadow:
+														"0px 0px 8px rgb(255,255,255)",
+												}}
+												style={{
+													marginRight: "20px",
+													color: "white",
+													fontWeight: "bold",
+													border: "none",
+													outline: "none",
+													marginBottom: "20px",
+													padding: "10px 20px",
+													backgroundColor: "#14b8a6",
+													borderRadius: "20px",
+												}}
+											>
+												My Resume
+											</motion.button>
+										</div>
+									</a>
 								</div>
 							</div>
 
@@ -208,9 +262,7 @@ const Homepage = () => {
 						{/* <div className="homepage-projects">
 							<AllProjects />
 						</div> */}
-						<div>
-							<Skills />
-						</div>
+						<Skills />
 						<Exerience />
 						<div className="page-footer">
 							<Footer />
@@ -218,7 +270,7 @@ const Homepage = () => {
 					</div>
 				</div>
 			</div>
-		</React.Fragment>
+		</motion.div>
 	);
 };
 

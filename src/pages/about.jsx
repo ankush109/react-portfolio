@@ -5,7 +5,7 @@ import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
 import Logo from "../components/common/logo";
 import Socials from "../components/about/socials";
-
+import { motion } from "framer-motion";
 import INFO from "../data/user";
 import SEO from "../data/seo";
 
@@ -19,7 +19,19 @@ const About = () => {
 	const currentSEO = SEO.find((item) => item.page === "about");
 
 	return (
-		<React.Fragment>
+		<motion.div
+			initial={{
+				x: "-100vw",
+			}}
+			animate={{
+				x: 0,
+			}}
+			transition={{
+				type: "spring",
+				stiffness: 35,
+				delay: 0.2,
+			}}
+		>
 			<Helmet>
 				<title>{`About | ${INFO.main.title}`}</title>
 				<meta name="description" content={currentSEO.description} />
@@ -50,7 +62,13 @@ const About = () => {
 								</div>
 								<div className="main-edu">
 									<div className="edu">
-										<h1>Education</h1>
+										<h1
+											style={{
+												color: "#14b8a6",
+											}}
+										>
+											Education
+										</h1>
 										<p>
 											<strong
 												style={{
@@ -113,7 +131,7 @@ const About = () => {
 					</div>
 				</div>
 			</div>
-		</React.Fragment>
+		</motion.div>
 	);
 };
 
