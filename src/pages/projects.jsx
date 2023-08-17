@@ -43,8 +43,7 @@ const Projects = () => {
 			}}
 			transition={{
 				type: "spring",
-				stiffness: 35,
-				delay: 0.2,
+				stiffness: 30,
 			}}
 		>
 			<Helmet>

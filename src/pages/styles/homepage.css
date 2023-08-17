@@ -6,7 +6,9 @@
 	align-items: center;
 	padding-top: 130px;
 }
-
+.gojo-logo {
+	animation: imgUp 0.7s linear infinite alternate;
+}
 .homepage-container {
 	padding-top: 25px;
 }

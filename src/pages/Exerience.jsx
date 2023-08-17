@@ -6,7 +6,13 @@ function Experience() {
 	return (
 		<div className="container">
 			<div className="f">
-				<h1>Experience</h1>
+				<h1
+					style={{
+						color: "#008080",
+					}}
+				>
+					Experience
+				</h1>
 			</div>
 			<div className="card">
 				<div>

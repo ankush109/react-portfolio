@@ -43,7 +43,7 @@ const Contact = () => {
 			}}
 			transition={{
 				type: "spring",
-				stiffness: 35,
+				stiffness: 30,
 				delay: 0.2,
 			}}
 		>
