@@ -11,10 +11,10 @@ const Home = () => {
 		borderColor: "red",
 	};
 	useEffect(() => {
-		// setLoading(true);
-		// setTimeout(() => {
-		// 	setLoading(false);
-		// }, 3000);
+		setLoading(true);
+		setTimeout(() => {
+			setLoading(false);
+		}, 2500);
 	}, []);
 	return (
 		<div className="caller">
