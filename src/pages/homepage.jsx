@@ -202,7 +202,7 @@ const Homepage = () => {
 											/>
 										</a>
 										<a
-											href={`mailto:${INFO.main.email}`}
+											href={INFO.socials.linkedin}
 											target="_blank"
 											rel="noreferrer"
 										>
