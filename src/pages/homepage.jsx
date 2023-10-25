@@ -212,7 +212,7 @@ const Homepage = () => {
 											/>
 										</a>
 									</div>
-									<a href="https://drive.google.com/file/d/1sp-eQmaDzqW7zTZ3K9apiZ_HUXy55aaH/view?usp=sharing">
+									<a href="https://drive.google.com/file/d/1TJgVlaJiaSDvq493CFWHk0Etu2FzwFn2/view?usp=sharing">
 										<div
 											style={{
 												paddingTop: "20px",
