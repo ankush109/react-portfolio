@@ -33,21 +33,42 @@ const INFO = {
 
 	projects: [
 		{
+			title: "GreenIQ  ( LMS )",
+			description:
+				"The GreenIQ Web Application is the ultimate solution to allrural education problems.This team project incorporates solutions like a Virtual Navigation Assistant, Live 1:1 Booked Sessions with assigned mentors, a Chatbot for enhancing communication skills, a Content Gallery.",
+			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
+			linkText: "Live-Link",
+			gitlink: "https://github.com/ankush109/GreenIQ-ORIGIN_SIH-2023",
+			livelink:"https://green-iq-deployed.vercel.app/"
+
+		},
+
+		{
+			title: "Payment Gateway",
+			description:
+				"This is a payment gateway system through which one registers themselves and then link their bank accounts to our system . Once the bank account is Linked You can start paying any user who has been registered in our systems .",
+			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
+			linkText: "Live-Link",
+			gitlink: "https://github.com/ankush109/ADAT_FINAL_APP",
+			livelink:"https://kumars-frontend.vercel.app/"
+		},
+		{
 			title: "Ecommerce App",
 			description:
 				"A complete Ecommerce platform where you can add, buy and sell as a owner , users can login , rate their product and add a review and the owner can use a specific route for their use to add a product , delete a product ,delete reviews and check the orders placed by the users",
 			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
-			linkText: "View Project",
-			link: "https://github.com/ankush109/ADAT_FINAL_APP			",
+			linkText: "Live-Link",
+			gitlink: "https://github.com/ankush109/ADAT_FINAL_APP",
+			livelink:"https://kumars-frontend.vercel.app/"
 		},
-
 		{
 			title: "Job Portal Mobile App",
 			description:
 				"A simple job portal app made with react native where you can search for jobs and appply for them.",
 			logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
-			linkText: "View Project",
-			link: "https://github.com/ankush109/job_search_reactnative",
+			linkText: "Live-Link",
+			gitlink: "https://github.com/ankush109/job_search_reactnative",
+			livelink:""
 		},
 
 		{
@@ -55,7 +76,7 @@ const INFO = {
 			description:
 				"A simple chat app made with react js and node js where you can chat with your friends and also create a group chat and chat with your friends in a group",
 			logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
-			linkText: "View Project",
+			linkText: "Live-Link",
 			link: "https://github.com/ankush109/MERN_stack_chatapp",
 		},
 	],

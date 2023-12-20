@@ -64,7 +64,9 @@
 	padding-left: 20px;
 	font-weight: 700;
 }
-
+.margin{
+	margin-left: 20px;
+}
 @media (max-width: 600px) {
 	.project {
 		height: 300px;
